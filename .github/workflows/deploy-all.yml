@@ -37,5 +37,5 @@ jobs:
         BUCKET_NAME: ${{ secrets.TOBE_CREATED_BUCKET_NAME }}
       run: |
         chmod +x *.sh
-        ./one-click.sh  ${{BUCKET_NAME}}
+        ./one-click.sh  ${BUCKET_NAME}
 
