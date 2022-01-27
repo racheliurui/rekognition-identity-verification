@@ -38,4 +38,3 @@ jobs:
       run: |
         chmod +x *.sh
         ./one-click.sh  ${BUCKET_NAME}
-
