@@ -30,10 +30,6 @@ jobs:
     - name: Synth infrastructure stack
       run: yarn --cwd packages/infrastructure cdk synth
 
-    - name: Deploy infrastructure stack
-      run: yarn --cwd packages/infrastructure cdk deploy --require-approval never
-
-
     - name: Deploy Cloudformation Templates
       env:
         BUCKET_NAME: ${{ secrets.TOBE_CREATED_BUCKET_NAME }}
