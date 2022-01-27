@@ -22,16 +22,16 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
     
     - uses: actions/setup-node@v2
-        with:
-          node-version: "14"
+      with:
+        node-version: "14"
 
     - run: yarn install
 
     - name: Synth infrastructure stack
-        run: yarn --cwd packages/infrastructure cdk synth
+      run: yarn --cwd packages/infrastructure cdk synth
 
     - name: Deploy infrastructure stack
-        run: yarn --cwd packages/infrastructure cdk deploy --require-approval never
+      run: yarn --cwd packages/infrastructure cdk deploy --require-approval never
 
 
     - name: Deploy Cloudformation Templates
